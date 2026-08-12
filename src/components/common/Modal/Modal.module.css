@@ -1,0 +1,67 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(38, 50, 56, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal-backdrop);
+  padding: var(--space-md);
+  animation: fadeIn var(--transition-fast) forwards;
+}
+
+.modal {
+  position: relative;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: var(--z-modal);
+  padding: var(--space-xl);
+  animation: slideUp 200ms ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+
+.title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-dark);
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  color: var(--color-neutral-light-grey);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-fast);
+}
+
+.closeButton:hover {
+  color: var(--color-neutral-dark);
+}

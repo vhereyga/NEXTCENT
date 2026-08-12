@@ -1,0 +1,59 @@
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  width: 100%;
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-neutral-dark);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-dark);
+  background-color: var(--color-silver);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.input::placeholder {
+  color: var(--color-neutral-grey-blue);
+}
+
+.input:focus {
+  outline: none;
+  background-color: var(--color-white);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(76, 175, 79, 0.2);
+}
+
+.hasError .input {
+  border-color: var(--color-error);
+  background-color: #FFF5F5;
+}
+
+.errorMessage {
+  font-size: var(--font-size-xs);
+  color: var(--color-error);
+}
+
+.rightElement {
+  position: absolute;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  color: var(--color-neutral-grey-blue);
+}
