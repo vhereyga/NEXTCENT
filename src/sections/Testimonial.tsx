@@ -1,64 +1,74 @@
-import testimonialImage from '../assets/testimonial.jpg'
-import clientLogos from '../assets/clients-logos.svg'
-
 export default function Testimonial() {
   return (
-    <section className="testimonial-section" id="testimonial">
-      <div className="testimonial-section__inner">
-        {/* Left: photo */}
-        <div className="testimonial-section__media">
-          <img
-            src={testimonialImage}
-            alt="Customer testimonial portrait of Tim Smith"
-            className="testimonial-section__photo"
-          />
-        </div>
+    <section className="customer-s" id="testimonial">
+      <div className="section-container customer-s-inner">
+        <img className="image-9" src="/asset2/image-90.png" alt="Tesla Customer" />
 
-        {/* Right: quote + author */}
-        <div className="testimonial-section__body">
-          <blockquote className="testimonial-section__quote">
-            <p className="testimonial-section__text">
+        <div className="frame-11">
+          <div className="content">
+            <p className="we-have-enjoyed-working-with-the-just-go-system-to-setup-and-go-live-with-our-new-membership-platform-the-initial-effort-to-organise-it-along-the-lines-of-how-our-sport-currently-works-was-quick-and-relatively-easy-the-new-system-has-already-massively-improved-the-time-and-effort-it-takes-to-setup-and-process-member-and-club-applications-it-will-help-us-to-communicate-with-people-in-our-sport-in-a-much-more-effective-way-and-collect-data-to-help-us-improve-how-our-sport-is-governed">
               Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
               lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu
               enim metus. Vivamus sed libero ornare, tristique quam in, gravida
-              enim. Fusce egestas tristique ultrices. Nam tempor, augue nec
-              tincidunt molestie, massa nunc varius arcu.
+              enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit
+              at ligula molestie, nec molestie mi blandit. Suspendisse cursus
+              tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse
+              eget lorem eu turpis vestibulum pretium. Suspendisse potenti.
+              Quisque malesuada enim sapien, vitae placerat ante feugiat eget.
+              Quisque vulputate odio neque, eget efficitur libero condimentum id.
+              Curabitur id nibh id sem dignissim finibus ac sit amet magna.
             </p>
-          </blockquote>
+            <div className="frame-7">
+              <h3 className="tim-smith">Tim Smith</h3>
+              <p className="british-dragon-boat-racing-association">
+                British Dragon Boat Racing Association
+              </p>
+            </div>
+          </div>
 
-          <footer className="testimonial-section__author">
-            {/* Decorative quote mark */}
-            <span className="testimonial-section__quote-mark" aria-hidden="true">
-              <svg width="40" height="28" viewBox="0 0 40 28" fill="none">
+          <div className="frame-14">
+            <div className="frame-10">
+              <div className="logo9">
+                <img className="logo10" src="/asset2/logo15.svg" alt="Client Logo 1" />
+              </div>
+              <div className="logo11">
+                <img className="logo12" src="/asset2/logo17.svg" alt="Client Logo 2" />
+              </div>
+              <div className="logo11">
+                <img className="logo13" src="/asset2/logo19.svg" alt="Client Logo 3" />
+              </div>
+              <div className="logo11">
+                <img className="logo14" src="/asset2/logo21.svg" alt="Client Logo 4" />
+              </div>
+              <div className="logo11">
+                <img className="logo15" src="/asset2/logo23.svg" alt="Client Logo 5" />
+              </div>
+              <div className="logo11">
+                <img className="logo16" src="/asset2/logo25.svg" alt="Client Logo 6" />
+              </div>
+            </div>
+
+            <a href="#customers" className="frame-13">
+              <span className="meet-all-customers">Meet all customers</span>
+              <svg
+                className="meet-arrow"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
-                  d="M0 28V17.6C0 12.427 1.493 8.373 4.48 5.44 7.467 2.453 11.68.96 17.12.96v5.12c-2.88 0-5.12.8-6.72 2.4-1.547 1.6-2.347 3.84-2.4 6.72H14V28H0Zm22.88 0V17.6c0-5.173 1.493-9.227 4.48-12.16C30.347 2.453 34.56.96 40 .96v5.12c-2.88 0-5.12.8-6.72 2.4-1.547 1.6-2.347 3.84-2.4 6.72H36.88V28H22.88Z"
-                  fill="#4CAF4F"
-                  opacity="0.25"
+                  d="M16 12L10 6M16 12L10 18M16 12H4"
+                  stroke="#4CAF4F"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
-            </span>
-            <div className="testimonial-section__author-info">
-              <cite className="testimonial-section__author-name">
-                Tim Smith
-              </cite>
-              <span className="testimonial-section__author-org">
-                British Dragon Boat Racing Association
-              </span>
-            </div>
-          </footer>
+            </a>
+          </div>
         </div>
-      </div>
-
-      {/* Bottom: client logos row */}
-      <div className="testimonial-section__clients">
-        <img
-          src={clientLogos}
-          alt="Featured customers logos"
-          className="testimonial-section__clients-img"
-        />
-        <a href="#" className="testimonial-section__meet-link">
-          Meet all customers →
-        </a>
       </div>
     </section>
   )

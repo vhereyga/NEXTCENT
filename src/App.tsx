@@ -9,13 +9,14 @@ import Testimonial from './sections/Testimonial'
 import Blog from './sections/Blog'
 import CTABanner from './sections/CTABanner'
 import Footer from './sections/Footer'
+import './style.css'
 import './App.css'
 
 export default function App() {
   return (
-    <>
+    <div className="landing-page">
       <Navbar />
-      <main>
+      <main className="landing-page-body">
         <Hero />
         <Clients />
         <Features />
@@ -27,6 +28,6 @@ export default function App() {
         <CTABanner />
       </main>
       <Footer />
-    </>
+    </div>
   )
 }

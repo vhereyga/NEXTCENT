@@ -1,69 +1,103 @@
-import blog1 from '../assets/blog-1.jpg'
-import blog2 from '../assets/blog-2.jpg'
-import blog3 from '../assets/blog-3.jpg'
-
-interface BlogPost {
-  id: number
-  title: string
-  category: string
-  image: string
-  imageAlt: string
-}
-
-const BLOG_POSTS: BlogPost[] = [
-  {
-    id: 1,
-    category: 'Safeguarding',
-    title: 'Creating Streamlined Safeguarding Processes with OneRen',
-    image: blog1,
-    imageAlt: 'Person working on a laptop in a cozy indoor setting',
-  },
-  {
-    id: 2,
-    category: 'Responsibilities',
-    title: 'What are your safeguarding responsibilities and how can you manage them?',
-    image: blog2,
-    imageAlt: 'Hands on a laptop displaying spreadsheet data on a desk with coffee',
-  },
-  {
-    id: 3,
-    category: 'Membership',
-    title: 'Revamping the Membership Model with Triathlon Australia',
-    image: blog3,
-    imageAlt: 'Top-down view of hands typing on a laptop with a notebook and plant nearby',
-  },
-]
-
 export default function Blog() {
   return (
-    <section className="blog-section">
-      <div className="blog-section__inner">
-        <div className="blog-section__header">
-          <h2 className="blog-section__title">Caring is the new marketing</h2>
-          <p className="blog-section__subtitle">
-            The ability to capture memories and moments is a beautiful gift.
-            Read our stories.
+    <section className="community-updates" id="faq">
+      <div className="section-container blog-inner">
+        <div className="community3">
+          <h2 className="section-title">Caring is the new marketing</h2>
+          <p className="description3">
+            The Nexcent blog is the best place to read about the latest membership
+            insights, trends and more. See who's joining the community, read
+            about how our community are increasing their membership income and
+            lot's more.​
           </p>
         </div>
 
-        <ul className="blog-section__list">
-          {BLOG_POSTS.map((post) => (
-            <li key={post.id} className="blog-section__item">
-              <img
-                src={post.image}
-                alt={post.imageAlt}
-                className="blog-section__img"
-              />
-              <div className="blog-section__body">
-                <span className="blog-section__category">{post.category}</span>
-                <h3 className="blog-section__post-title">{post.title}</h3>
-                <a href="#" className="blog-section__read-more">
-                  Read more →
-                </a>
-              </div>
-            </li>
-          ))}
-        </ul>
+        <div className="frame-15">
+          <div className="_12">
+            <img className="image-18" src="/asset2/image-180.png" alt="Blog post 1" />
+            <div className="content2">
+              <h3 className="creating-streamlined-safeguarding-processes-with-one-ren">
+                Creating Streamlined Safeguarding Processes with OneRen
+              </h3>
+              <a href="#blog-1" className="frame-132">
+                <span className="readmore">Readmore</span>
+                <svg
+                  className="readmore-arrow"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 3.33331L12.6667 7.99998L8 12.6666M12 7.99998H3.33334"
+                    stroke="#4CAF4F"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div className="_22">
+            <img className="image-19" src="/asset2/image-190.png" alt="Blog post 2" />
+            <div className="content2">
+              <h3 className="creating-streamlined-safeguarding-processes-with-one-ren">
+                What are your safeguarding responsibilities and how can you manage
+                them?
+              </h3>
+              <a href="#blog-2" className="frame-132">
+                <span className="readmore">Readmore</span>
+                <svg
+                  className="readmore-arrow"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 3.33331L12.6667 7.99998L8 12.6666M12 7.99998H3.33334"
+                    stroke="#4CAF4F"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div className="_32">
+            <img className="image-20" src="/asset2/image-200.png" alt="Blog post 3" />
+            <div className="content2">
+              <h3 className="creating-streamlined-safeguarding-processes-with-one-ren">
+                Revamping the Membership Model with Triathlon Australia
+              </h3>
+              <a href="#blog-3" className="frame-132">
+                <span className="readmore">Readmore</span>
+                <svg
+                  className="readmore-arrow"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 3.33331L12.6667 7.99998L8 12.6666M12 7.99998H3.33334"
+                    stroke="#4CAF4F"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )

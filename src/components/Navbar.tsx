@@ -1,93 +1,63 @@
 import { useState } from 'react'
-import Button from './Button'
-import nexcentLogo from '../assets/Logo.svg'
 
 const NAV_LINKS = [
   { label: 'Home', href: '#' },
   { label: 'Service', href: '#service' },
+  { label: 'Feature', href: '#feature' },
   { label: 'Product', href: '#product' },
-  { label: 'Pricing', href: '#pricing' },
   { label: 'Testimonial', href: '#testimonial' },
   { label: 'FAQ', href: '#faq' },
 ]
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [activeTab, setActiveTab] = useState('Home')
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    // position: relative diperlukan agar mobile drawer (position: absolute) menempel ke navbar
-    <header className="navbar">
-      <div className="navbar__inner">
-        {/* Logo */}
-        <a href="#" className="navbar__logo" aria-label="Nexcent home">
-          <img
-            src={nexcentLogo}
-            alt="Nexcent"
-            className="navbar__logo-img"
-            height="24"
-          />
-        </a>
+    <header className="frame-36">
+      <div className="section-container navbar-inner">
+        <div className="logo18">
+          <img className="icon9" src="/asset2/icon11.svg" alt="Nexcent Icon" />
+          <img className="nexcent2" src="/asset2/nexcent1.svg" alt="Nexcent" />
+        </div>
 
-        {/* Desktop nav */}
-        <nav className="navbar__nav" aria-label="Main navigation">
-          <ul className="navbar__links">
-            {NAV_LINKS.map((link, i) => (
-              <li key={link.label}>
-                <a
-                  href={link.href}
-                  className={`navbar__link${i === 0 ? ' navbar__link--active' : ''}`}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+        <nav className={`heading-name ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              onClick={() => {
+                setActiveTab(link.label)
+                setMobileMenuOpen(false)
+              }}
+              className={link.label === activeTab ? 'header-menu-default' : 'menu-item-default'}
+            >
+              <div className={link.label === activeTab ? 'label3' : 'label4'}>
+                {link.label}
+              </div>
+            </a>
+          ))}
         </nav>
 
-        {/* Desktop action buttons */}
-        <div className="navbar__actions">
-          <Button label="Login" variant="outline" />
-          <Button label="Sign up" variant="primary" />
+        <div className="login">
+          <a href="#login" className="button3">
+            <div className="login2">Login</div>
+          </a>
+          <a href="#signup" className="button4">
+            <div className="sign-up">Sign up</div>
+          </a>
         </div>
 
-        {/* Hamburger — mobile only */}
         <button
           type="button"
-          className="navbar__hamburger"
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={menuOpen}
-          aria-controls="mobile-menu"
-          onClick={() => setMenuOpen((prev) => !prev)}
+          className="mobile-hamburger"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
         >
-          <span className="navbar__hamburger-line" />
-          <span className="navbar__hamburger-line" />
-          <span className="navbar__hamburger-line" />
+          <span />
+          <span />
+          <span />
         </button>
-      </div>
-
-      {/* Mobile drawer — position absolute relatif terhadap .navbar */}
-      <div
-        id="mobile-menu"
-        className={`navbar__mobile-menu${menuOpen ? ' navbar__mobile-menu--open' : ''}`}
-        aria-hidden={!menuOpen}
-      >
-        <ul className="navbar__mobile-links">
-          {NAV_LINKS.map((link) => (
-            <li key={link.label}>
-              <a
-                href={link.href}
-                className="navbar__mobile-link"
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-        <div className="navbar__mobile-actions">
-          <Button label="Login" variant="outline" onClick={() => setMenuOpen(false)} />
-          <Button label="Sign up" variant="primary" onClick={() => setMenuOpen(false)} />
-        </div>
       </div>
     </header>
   )
