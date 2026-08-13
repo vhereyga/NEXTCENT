@@ -95,7 +95,6 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .navbar-inner {
@@ -397,10 +396,10 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   margin-top: 32px;
-  gap: 16px;
+  gap: 15px;
 }
 
 .logo {
@@ -1173,6 +1172,7 @@ body {
    RESPONSIVE BREAKPOINTS
    -------------------------------------------- */
 @media (max-width: 1024px) {
+
   .hero-section__inner,
   .unlock2,
   .achievements-inner,
@@ -1204,11 +1204,12 @@ body {
   .clients-logos {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 24px;
+    gap: 15px;
   }
 }
 
 @media (max-width: 768px) {
+
   .heading-name,
   .login {
     display: none;
@@ -1227,7 +1228,7 @@ body {
     width: 100%;
     background: #ffffff;
     padding: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
   .let-nextcent-do-the-work-so-you-don-t-have-to {
