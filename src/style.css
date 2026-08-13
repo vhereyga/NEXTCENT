@@ -396,9 +396,11 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   margin-top: 32px;
+  gap: 15px;
+
 }
 
 .logo {
@@ -488,12 +490,14 @@ body {
   text-align: center;
 }
 
-/* rectangle157 position matching Figma spec 100% */
+/* rectangle157 position */
 .icon {
   width: 65px;
   height: 56px;
   position: relative;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .rectangle-157 {
@@ -502,32 +506,18 @@ body {
   width: 50px;
   height: 49px;
   position: absolute;
-  left: 65px;
-  top: 56px;
-  transform-origin: 0 0;
-  transform: rotate(-180deg);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
 }
 
 .icon2,
 .icon3 {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 48px;
-  height: 48px;
+  position: relative;
   z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icon2 img,
-.icon3 img,
-.group-1,
-.group-2 {
-  max-width: 100%;
-  max-height: 100%;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
 }
 
